@@ -1,0 +1,52 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "item": "",
+            "category": "",
+            "price": 449,
+            "image": "",
+            "available": true
+        },
+        {
+           "id": 2,
+            "item": "",
+            "category": "",
+            "price": 399,
+            "image": "",
+            "available": true 
+        },
+        {
+           "id": 3,
+            "item": "",
+            "category": "",
+            "price": 399,
+            "image": "",
+            "available": true 
+        },
+        {
+           "id": 4,
+            "item": "",
+            "category": "",
+            "price": 399,
+            "image": "",
+            "available": true 
+        },
+        {
+           "id": 5,
+            "item": "",
+            "category": "",
+            "price": 399,
+            "image": "",
+            "available": true 
+        },
+        {
+           "id": 6,
+            "item": "",
+            "category": "",
+            "price": 399,
+            "image": "",
+            "available": true 
+        }
+    ]
+}
