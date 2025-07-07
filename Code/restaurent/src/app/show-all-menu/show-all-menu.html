@@ -16,14 +16,14 @@
         </thead>
 
         <tbody>
-            <tr *ngFor="let s of menus | async">
-                <td>{{s.id}}</td>
-                <td>{{s.item}}</td>
-                <td>{{s.category}}</td>
-                <td>{{s.image}}</td>
-                <td>{{s.price}}</td>
-                <td>{{s.available}}</td>
-                <td></td>
+            <tr *ngFor="let m of menus | async">
+                <td>{{m.id}}</td>
+                <td>{{m.item}}</td>
+                <td>{{m.category}}</td>
+                <td>{{m.image}}</td>
+                <td>{{m.price}}</td>
+                <td>{{m.available}}</td>
+                <td><img src="{{m.image}}" height="100" width="100"></td>
 
             </tr>
 
