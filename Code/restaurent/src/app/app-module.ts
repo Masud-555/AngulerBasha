@@ -4,11 +4,14 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { Home } from './home/home';
+import { ShowAllMenu } from './show-all-menu/show-all-menu';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     App,
-    Home
+    Home,
+    ShowAllMenu
   ],
   imports: [
     BrowserModule,
@@ -17,7 +20,11 @@ import { Home } from './home/home';
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+
+     provideHttpClient(
+      withFetch()
+    )
   ],
   bootstrap: [App]
 })
