@@ -7,6 +7,6 @@ export class Item {
     category!: string;
     image!: string;
     price!: number;
-    available!: boolean;
+    available!: string;
 
 }

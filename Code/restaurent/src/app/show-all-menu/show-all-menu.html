@@ -1,1 +1,35 @@
 
+<div class="container">
+    <h1 class="my-2 text-center">All Menu</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>item</th>
+                <th>category</th>
+                <th>image</th>
+                <th>price</th>
+                <th>available</th>
+            </tr>          
+            
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let s of menus | async">
+                <td>{{s.id}}</td>
+                <td>{{s.item}}</td>
+                <td>{{s.category}}</td>
+                <td>{{s.image}}</td>
+                <td>{{s.price}}</td>
+                <td>{{s.available}}</td>
+                <td></td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
