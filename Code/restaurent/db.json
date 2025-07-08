@@ -1,61 +1,76 @@
 {
-    "menu": [
-        {
-            "id": 1,
-            "item": "Hawawshi",
-            "category": "snacks",
-            "price": 449,
-            "image": "https://urlzs.com/cA6Fmy",
-            "available": "Yes"
-        },
-        {
-            "id": 2,
-            "item": "Kofta kebabs",
-            "category": "Kebab",
-            "price": 399,
-            "image": "https://urlzs.com/9RW0u4",
-            "available": "Yes"
-        },
-        {
-            "id": 3,
-            "item": "Pakistani Beef Meatball Curry",
-            "category": "Non-Veg",
-            "price": 399,
-            "image": "https://short-link.me/12CXT",
-            "available": "Yes"
-        },
-        {
-            "id": 4,
-            "item": "Vegetable Pulao",
-            "category": "veg Item",
-            "price": 399,
-            "image": "https://short-link.me/16Qpq",
-            "available": "Yes"
-        },
-        {
-            "id": 5,
-            "item": "American Cobb salad",
-            "category": "Salad",
-            "price": 399,
-            "image": "https://short-link.me/12C-n",
-            "available": "Yes"
-        },
-        {
-            "id": 6,
-            "item": "Om Ali",
-            "category": "Dessert",
-            "price": 399,
-            "image": "https://urlzs.com/ReEwQq",
-            "available": "Yes"
-        },
-        {
-            "id": 7,
-            "item": "kiwi smoothie",
-            "category": "Juice",
-            "price": 399,
-            "image": "https://short-link.me/16QqK",
-            "available": "Yes"
-        }
-
-    ]
+  "menu": [
+    {
+      "id": "1",
+      "item": "Hawawshi",
+      "category": "snacks",
+      "price": 449,
+      "image": "https://urlzs.com/cA6Fmy",
+      "available": "Yes"
+    },
+    {
+      "id": "2",
+      "item": "Kofta kebabs",
+      "category": "Kebab",
+      "price": 399,
+      "image": "https://urlzs.com/9RW0u4",
+      "available": "Yes"
+    },
+    {
+      "id": "3",
+      "item": "Pakistani Beef Meatball Curry",
+      "category": "Non-Veg",
+      "price": 399,
+      "image": "https://short-link.me/12CXT",
+      "available": "Yes"
+    },
+    {
+      "id": "4",
+      "item": "Vegetable Pulao",
+      "category": "veg Item",
+      "price": 399,
+      "image": "https://short-link.me/16Qpq",
+      "available": "Yes"
+    },
+    {
+      "id": "5",
+      "item": "American Cobb salad",
+      "category": "Salad",
+      "price": 399,
+      "image": "https://short-link.me/12C-n",
+      "available": "Yes"
+    },
+    {
+      "id": "6",
+      "item": "Om Ali",
+      "category": "Dessert",
+      "price": 399,
+      "image": "https://urlzs.com/ReEwQq",
+      "available": "Yes"
+    },
+    {
+      "id": "7",
+      "item": "kiwi smoothie",
+      "category": "Juice",
+      "price": 399,
+      "image": "https://short-link.me/16QqK",
+      "available": "Yes"
+    },
+    {
+      "id": "f073",
+      "item": "Banana Shake",
+      "category": "Drinks",
+      "image": "",
+      "price": 100,
+      "available": ""
+    },
+    {
+      "id": "927f",
+      "item": "Brookly Salad",
+      "category": "Main Course",
+      "image": "",
+      "price": 99,
+      "available": "Available"
+    }
+  ]
 }
