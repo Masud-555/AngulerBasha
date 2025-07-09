@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MenuService } from '../service/menu.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-show-all-menu',
@@ -11,7 +12,12 @@ export class ShowAllMenu implements OnInit{
 
 
 
-  constructor(private menuService: MenuService){}
+  constructor(
+    private menuService: MenuService,
+    private router: Router,
+    private cdr: ChangeDetectorRef,
+      
+  ){}
   menus: any;
 
   ngOnInit(): void {
@@ -21,6 +27,26 @@ export class ShowAllMenu implements OnInit{
   loadAllItems(){
 
     this.menus = this.menuService.getAllMenu();
+
+  }
+
+  deleteStudent(id: string):void{
+    this.menuService.deleteMenu(id).subscribe({
+      next: () =>{
+
+        console.log('Menu deleted');
+        this.loadAllItems();
+       this.cdr.markForCheck();
+
+      },
+
+      error: (err)=>{
+
+        console.log('Error deleting Menu:', err);
+      }
+
+    });
+
 
   }
 

@@ -8,20 +8,27 @@ import { Menu } from '../../model/menu.model';
 })
 export class MenuService {
 
-  baseUrl: string =  "http://localhost:3000/menu"
+  baseUrl: string = "http://localhost:3000/menu"
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
 
-    getAllMenu(): Observable<any>{
+  getAllMenu(): Observable<any> {
 
-      return this.http.get(this.baseUrl);
+    return this.http.get(this.baseUrl);
 
-    }
-
-    saveMenu(menu: Menu):Observable<any>{
-
-      return this.http.post(this.baseUrl, menu);
-
-    }
   }
+
+  saveMenu(menu: Menu): Observable<any> {
+
+    return this.http.post(this.baseUrl, menu);
+
+  }
+
+  deleteMenu(id: string): Observable<any> {
+
+    return this.http.delete(this.baseUrl + '/' + id);
+
+  }
+
+}
