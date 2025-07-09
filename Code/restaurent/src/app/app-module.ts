@@ -8,13 +8,15 @@ import { ShowAllMenu } from './show-all-menu/show-all-menu';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Addmenu } from './addmenu/addmenu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Updatemenu } from './updatemenu/updatemenu';
 
 @NgModule({
   declarations: [
     App,
     Home,
     ShowAllMenu,
-    Addmenu
+    Addmenu,
+    Updatemenu
   ],
   imports: [
     BrowserModule,

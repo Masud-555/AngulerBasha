@@ -1,12 +1,6 @@
 {
   "students": [
     {
-      "id": "1",
-      "name": "Rahim",
-      "email": "rahim@gmail.com",
-      "fee": 1500
-    },
-    {
       "id": "2",
       "name": "Masud",
       "email": "masud@gmail.com",
@@ -17,6 +11,12 @@
       "name": "Masud",
       "email": "ajdljd@gmail.com",
       "fee": "2000"
+    },
+    {
+      "id": "524f",
+      "name": "Andullah Al Masum",
+      "email": "masud@gmail.com",
+      "fee": 852147
     }
   ],
   "location": [

@@ -30,7 +30,7 @@ export class ShowAllMenu implements OnInit{
 
   }
 
-  deleteStudent(id: string):void{
+  deleteMenu(id: string):void{
     this.menuService.deleteMenu(id).subscribe({
       next: () =>{
 
@@ -47,7 +47,28 @@ export class ShowAllMenu implements OnInit{
 
     });
 
-
   }
+
+ getMenuById(id: string):void{
+  this.menuService.getMenuById(id).subscribe({
+    next : (res) =>{
+      console.log(res)
+      console.log('Data get Successfull');
+      this.router.navigate(['/updatemenu', id])
+
+    },
+
+    error: (err) =>{
+
+      console.log(err);
+    }
+
+  });
+
+
+ }
+
+
+  
 
 }

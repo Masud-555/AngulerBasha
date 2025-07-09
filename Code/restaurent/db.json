@@ -2,11 +2,11 @@
   "menu": [
     {
       "id": "1",
-      "item": "Hawawshi",
-      "category": "snacks",
-      "price": 449,
-      "image": "https://urlzs.com/cA6Fmy",
-      "available": "Yes"
+      "item": "Sorshe Ilish",
+      "category": "Sea Food",
+      "price": 120,
+      "image": "https://surli.cc/udjwxg",
+      "available": "Available"
     },
     {
       "id": "2",
@@ -60,16 +60,8 @@
       "id": "f073",
       "item": "Banana Shake",
       "category": "Drinks",
-      "image": "",
+      "image": "https://surli.cc/zabwlz",
       "price": 100,
-      "available": ""
-    },
-    {
-      "id": "927f",
-      "item": "Brookly Salad",
-      "category": "Main Course",
-      "image": "",
-      "price": 99,
       "available": "Available"
     }
   ]

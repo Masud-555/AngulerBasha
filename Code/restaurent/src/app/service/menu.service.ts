@@ -31,4 +31,17 @@ export class MenuService {
 
   }
 
+  getMenuById(id: string): Observable<any> {
+
+    return this.http.get(this.baseUrl + '/' + id);
+
+  }
+
+  updateMenu(id: string, menu: Menu): Observable<any> {
+
+    return this.http.put(this.baseUrl +'/'+ id, menu);
+
+  }
+
+
 }
