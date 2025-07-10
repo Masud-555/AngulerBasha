@@ -21,7 +21,15 @@
   ],
   "location": [
     {
-      "id": "7f8e"
+      "id": "1",
+      "name": "Borishal",
+      "photo": "https://upload.wikimedia.org/wikipedia/commons/7/78/Barisal_Launch_Terninal.jpg"
+    },
+    {
+      "id": "b0c5",
+      "name": "Dhaka",
+      "email": "",
+      "photo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXhpgeCdZS9TVcKeA8UdnSI8FX1vz8l-cufA&s"
     }
   ]
 }

@@ -10,8 +10,8 @@ import { Addstudent } from './addstudent/addstudent';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Updatestudent } from './updatestudent/updatestudent';
 import { Addlocation } from './location/addlocation/addlocation';
-import { Viewalllocation } from './location/viewalllocation/viewalllocation';
 import { Updatelocation } from './location/updatelocation/updatelocation';
+import { ViewAllLocation } from './location/view-all-location/view-all-location';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,8 @@ import { Updatelocation } from './location/updatelocation/updatelocation';
     Addstudent,
     Updatestudent,
     Addlocation,
-    Viewalllocation,
-    Updatelocation
+    Updatelocation,
+    ViewAllLocation
   ],
   imports: [
     BrowserModule,
@@ -35,9 +35,9 @@ import { Updatelocation } from './location/updatelocation/updatelocation';
     provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
 
-     provideHttpClient(
+    provideHttpClient(
       withFetch()
-    ) 
+    )
   ],
   bootstrap: [App]
 })

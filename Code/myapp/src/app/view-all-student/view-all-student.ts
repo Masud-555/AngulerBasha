@@ -2,6 +2,8 @@ import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { Student } from '../../model/student.model';
 import { StudentService } from '../service/student.service';
 import { Route, Router } from '@angular/router';
+import { LocationService } from '../service/location.service';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-view-all-student',
@@ -10,22 +12,38 @@ import { Route, Router } from '@angular/router';
   styleUrl: './view-all-student.css'
 })
 export class ViewAllStudent implements OnInit {
-  students: any
+
+  students: Student[] = [];
+  locations: Location[] = [];
 
   constructor(
     private studentService: StudentService,
     private router: Router,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private locationService: LocationService,
 
   ) { }
 
   ngOnInit(): void {
-    this.loadAllStudent();
+    this.loadData();
   }
 
-  loadAllStudent() {
+  loadData(): void {
+    forkJoin({
+      locations: this.locationService.getAllLocation(),
+      students: this.studentService.getAllStudent()
+    }).subscribe({
 
-    this.students = this.studentService.getAllStudent();
+      next: ({ locations, students }) => {
+        this.locations = locations;
+        this.students = students;
+        this.cdr.markForCheck();
+      },
+      error: err => {
+        console.log(err);
+      }
+    });
+
 
   }
 
@@ -34,7 +52,7 @@ export class ViewAllStudent implements OnInit {
     this.studentService.deleteStudent(id).subscribe({
       next: (res) => {
         console.log(res);
-        this.loadAllStudent();
+        this.loadData();
         this.cdr.markForCheck();
       },
 
@@ -48,27 +66,27 @@ export class ViewAllStudent implements OnInit {
 
   }
 
-getStudentById(id: string):void{
+  getStudentById(id: string): void {
 
-this.studentService.getStudentById(id).subscribe({
+    this.studentService.getStudentById(id).subscribe({
 
-next : (res) =>{
-  console.log(res);
-  console.log('Data get Successfull');
-  this.router.navigate(['/updatestudent' ,id]);
+      next: (res) => {
+        console.log(res);
+        console.log('Data get Successfull');
+        this.router.navigate(['/updatestudent', id]);
 
-},
+      },
 
-error: (err) =>{
+      error: (err) => {
 
-console.log(err);
+        console.log(err);
 
-}
+      }
 
-});
-  
+    });
 
-}
+
+  }
 
 
 

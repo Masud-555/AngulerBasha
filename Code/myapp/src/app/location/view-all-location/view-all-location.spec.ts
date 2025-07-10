@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Viewalllocation } from './viewalllocation';
+import { ViewAllLocation } from './view-all-location';
 
-describe('Viewalllocation', () => {
-  let component: Viewalllocation;
-  let fixture: ComponentFixture<Viewalllocation>;
+describe('ViewAllLocation', () => {
+  let component: ViewAllLocation;
+  let fixture: ComponentFixture<ViewAllLocation>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [Viewalllocation]
+      declarations: [ViewAllLocation]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Viewalllocation);
+    fixture = TestBed.createComponent(ViewAllLocation);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
