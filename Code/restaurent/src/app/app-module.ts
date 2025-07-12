@@ -16,7 +16,8 @@ import { Updatemenu } from './updatemenu/updatemenu';
     Home,
     ShowAllMenu,
     Addmenu,
-    Updatemenu
+    Updatemenu,
+   
   ],
   imports: [
     BrowserModule,

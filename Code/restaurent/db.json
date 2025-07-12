@@ -64,5 +64,6 @@
       "price": 100,
       "available": "Available"
     }
-  ]
+  ],
+  "user": []
 }
