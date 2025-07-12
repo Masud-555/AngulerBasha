@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { MenuService } from '../service/menu.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Menu } from '../../model/menu.model';
+import { LocationService } from '../service/location.service';
 
 @Component({
   selector: 'app-addmenu',
@@ -12,12 +13,19 @@ import { Menu } from '../../model/menu.model';
 })
 export class Addmenu implements OnInit {
 
+  // location er kaj 
+  locations: Location[] = [];
+
   formGroup !: FormGroup;
 
 
-  constructor(private menuService: MenuService,
+  constructor(
+    private menuService: MenuService,
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private locationService: LocationService,
+    private cdr: ChangeDetectorRef
+
   ) { }
 
 
@@ -29,11 +37,13 @@ export class Addmenu implements OnInit {
       category: [''],
       image: [''],
       price: [''],
-      available: ['']
+      available: [''],
 
     });
 
   }
+
+
 
   addMenu(): void {
 
@@ -42,6 +52,8 @@ export class Addmenu implements OnInit {
     this.menuService.saveMenu(menu).subscribe({
 
       next: (res) => {
+
+
 
         console.log("Menu Saved ", res);
         this.formGroup.reset();
