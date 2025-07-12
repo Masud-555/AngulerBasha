@@ -89,6 +89,30 @@
       "password": "555277",
       "photo": "https://ln.run/6UuIn",
       "role": "user"
+    },
+    {
+      "id": "7219",
+      "name": "Abdul Karim",
+      "email": "abdulkarim@gmail.com",
+      "password": "123456",
+      "photo": "https://ln.run/6UuIn",
+      "role": "user"
+    },
+    {
+      "id": "43a4",
+      "name": "Masud",
+      "email": "masud@gmail.com",
+      "password": "786555",
+      "photo": "https://ln.run/6UuIn",
+      "role": "user"
+    },
+    {
+      "id": "c093",
+      "name": "Rahim",
+      "email": "rahim@gmail.com",
+      "password": "258",
+      "photo": "https://ln.run/6UuIn",
+      "role": "user"
     }
   ]
 }

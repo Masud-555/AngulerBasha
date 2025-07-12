@@ -25,6 +25,7 @@ export class Registration {
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       photo: ['', Validators.required],
+      role: ['user'],
 
     })
 
@@ -33,7 +34,7 @@ export class Registration {
 
   onSubmit(): void {
     if (this.regForm.valid) {
-      
+
       const user: User = {
         ...this.regForm.value,
         role: 'user'

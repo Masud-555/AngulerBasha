@@ -40,6 +40,7 @@ export class Login {
 
     this.authService.login(userDetails).subscribe({
       next: (res) => {
+
         console.log('User logged in successfully:', res);
 
         this.authService.storeToken(res.token);
