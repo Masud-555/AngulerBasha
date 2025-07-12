@@ -4,17 +4,26 @@ import { Home } from './home/home';
 import { ShowAllMenu } from './show-all-menu/show-all-menu';
 import { Addmenu } from './addmenu/addmenu';
 import { Updatemenu } from './updatemenu/updatemenu';
+import { Registration } from './auth/registration/registration';
+import { Userprofile } from './auth/userprofile/userprofile';
+import { Login } from './auth/login/login';
 
 
 const routes: Routes = [
 
-  { path: '', component: Home},
+  { path: '', component: Home },
 
-  { path: 'allmenu', component: ShowAllMenu},
+  { path: 'allmenu', component: ShowAllMenu },
 
-  { path: 'addmenu', component: Addmenu},
+  { path: 'addmenu', component: Addmenu },
 
-  { path: 'updatemenu/:id', component: Updatemenu},
+  { path: 'updatemenu/:id', component: Updatemenu },
+
+  { path: 'reg', component: Registration },
+
+  { path: 'userprofile', component: Userprofile },
+
+  { path: 'login', component: Login },
 
 
 ];

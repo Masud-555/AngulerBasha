@@ -65,5 +65,30 @@
       "available": "Available"
     }
   ],
-  "user": []
+  "user": [
+    {
+      "id": "9f0e",
+      "name": "Muhammad Emran Hossain",
+      "email": "emranhss@gmail.com",
+      "password": "123456",
+      "photo": "https://tinyurl.com/6dt7txrj",
+      "role": "user"
+    },
+    {
+      "id": "cadf",
+      "name": "Muhammad Emran Hossain",
+      "email": "emranhss@gmail.com",
+      "password": "123456",
+      "photo": "https://tinyurl.com/6dt7txrj",
+      "role": "user"
+    },
+    {
+      "id": "451f",
+      "name": "Abdullah Al Masud",
+      "email": "abdullahalmasud011@gmail.com",
+      "password": "555277",
+      "photo": "https://ln.run/6UuIn",
+      "role": "user"
+    }
+  ]
 }

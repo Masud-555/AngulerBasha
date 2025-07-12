@@ -9,6 +9,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Addmenu } from './addmenu/addmenu';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Updatemenu } from './updatemenu/updatemenu';
+import { Registration } from './auth/registration/registration';
+import { Login } from './auth/login/login';
+import { Userprofile } from './auth/userprofile/userprofile';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,9 @@ import { Updatemenu } from './updatemenu/updatemenu';
     ShowAllMenu,
     Addmenu,
     Updatemenu,
+    Registration,
+    Login,
+    Userprofile,
    
   ],
   imports: [

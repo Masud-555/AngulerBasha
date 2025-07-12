@@ -3,7 +3,7 @@ import { MenuService } from '../service/menu.service';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Menu } from '../../model/menu.model';
-import { LocationService } from '../service/location.service';
+
 
 @Component({
   selector: 'app-addmenu',
@@ -13,8 +13,6 @@ import { LocationService } from '../service/location.service';
 })
 export class Addmenu implements OnInit {
 
-  // location er kaj 
-  locations: Location[] = [];
 
   formGroup !: FormGroup;
 
@@ -23,7 +21,6 @@ export class Addmenu implements OnInit {
     private menuService: MenuService,
     private formBuilder: FormBuilder,
     private router: Router,
-    private locationService: LocationService,
     private cdr: ChangeDetectorRef
 
   ) { }
