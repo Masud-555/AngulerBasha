@@ -7,6 +7,7 @@ import { Updatemenu } from './updatemenu/updatemenu';
 import { Registration } from './auth/registration/registration';
 import { Userprofile } from './auth/userprofile/userprofile';
 import { Login } from './auth/login/login';
+import { Logout } from './auth/logout/logout';
 
 
 const routes: Routes = [
@@ -21,9 +22,11 @@ const routes: Routes = [
 
   { path: 'reg', component: Registration },
 
+  { path: 'login', component: Login },
+
   { path: 'userprofile', component: Userprofile },
 
-  { path: 'login', component: Login },
+  { path: 'logout', component: Logout },
 
 
 ];

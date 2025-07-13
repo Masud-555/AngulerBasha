@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../../../model/user.model';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../service/auth-service';
 import { Router } from '@angular/router';
 import { UserService } from '../../service/user-service';
+import { UserModel } from '../../../model/user.model';
 
 @Component({
   selector: 'app-userprofile',
@@ -13,12 +13,12 @@ import { UserService } from '../../service/user-service';
 })
 export class Userprofile implements OnInit {
 
-  user: User | null = null;
+  user: UserModel | null = null;
   private subscription: Subscription = new Subscription();
 
 
   constructor(
-    private authService: AuthService, // ✅ fixed spelling
+    private authService: AuthService,
     private router: Router,
     private userService: UserService,
 

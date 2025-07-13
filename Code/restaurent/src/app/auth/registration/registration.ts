@@ -2,7 +2,8 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../service/auth-service';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from '../../../model/user.model';
+import { UserModel } from '../../../model/user.model';
+
 
 @Component({
   selector: 'app-registration',
@@ -35,7 +36,7 @@ export class Registration {
   onSubmit(): void {
     if (this.regForm.valid) {
 
-      const user: User = {
+      const user: UserModel = {
         ...this.regForm.value,
         role: 'user'
       };

@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Inject, inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { User } from '../../model/user.model';
+import { UserModel } from '../../model/user.model';
 import { AuthResponse } from '../../model/authResponse.model';
 import { BehaviorSubject, catchError, map, Observable } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
@@ -12,8 +12,8 @@ export class AuthService {
 
   private baseUrl: string = "http://localhost:3000/user";
 
-  private currentUserSubject: BehaviorSubject<User | null>;
-  public currentUser$: Observable<User | null>;
+  private currentUserSubject: BehaviorSubject<UserModel | null>;
+  public currentUser$: Observable<UserModel | null>;
 
   constructor(
 
@@ -23,7 +23,7 @@ export class AuthService {
   ) {
 
     const storedUser = this.isBrowser() ? JSON.parse(localStorage.getItem('currentUser') || 'null') : null;
-    this.currentUserSubject = new BehaviorSubject<User | null>(storedUser);
+    this.currentUserSubject = new BehaviorSubject<UserModel | null>(storedUser);
     this.currentUser$ = this.currentUserSubject.asObservable();
 
   }
@@ -35,9 +35,9 @@ export class AuthService {
 
 
 
-  registration(user: User): Observable<AuthResponse> {
-    return this.http.post<User>(this.baseUrl, user).pipe(
-      map((newUser: User) => {
+  registration(user: UserModel): Observable<AuthResponse> {
+    return this.http.post<UserModel>(this.baseUrl, user).pipe(
+      map((newUser: UserModel) => {
 
         // create token by username and password 
         const token = btoa(`${newUser.email}${newUser.password}`);
@@ -53,7 +53,7 @@ export class AuthService {
   login(credentials: { email: string; password: string }): Observable<AuthResponse> {
     let params = new HttpParams().append('email', credentials.email);
 
-    return this.http.get<User[]>(`${this.baseUrl}`, { params }).pipe(
+    return this.http.get<UserModel[]>(`${this.baseUrl}`, { params }).pipe(
       map(users => {
         if (users.length > 0) {
           const user = users[0];
@@ -82,7 +82,7 @@ export class AuthService {
     }
   }
 
-  private setCurrentUser(user: User): void {
+  private setCurrentUser(user: UserModel): void {
     if (this.isBrowser()) {
       localStorage.setItem('currentUser', JSON.stringify(user));
     }
@@ -117,7 +117,7 @@ export class AuthService {
     return this.currentUserValue?.role;
   }
 
-  public get currentUserValue(): User | null {
+  public get currentUserValue(): UserModel | null {
     return this.currentUserSubject.value;
   }
 
@@ -131,13 +131,13 @@ export class AuthService {
   }
 
 
-  storeUserProfile(user: User): void {
+  storeUserProfile(user: UserModel): void {
     if (this.isBrowser()) {
       localStorage.setItem('currentUser', JSON.stringify(user));
     }
   }
 
-  getUserProfileFromStorage(): User | null {
+  getUserProfileFromStorage(): UserModel | null {
     if (this.isBrowser()) {
       const userProfile = localStorage.getItem('currentUser');
       console.log('User Profile is: ', userProfile);
