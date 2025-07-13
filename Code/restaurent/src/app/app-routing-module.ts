@@ -8,6 +8,7 @@ import { Registration } from './auth/registration/registration';
 import { Userprofile } from './auth/userprofile/userprofile';
 import { Login } from './auth/login/login';
 import { Logout } from './auth/logout/logout';
+import { Bookatable } from './auth/bookatable/bookatable';
 
 
 const routes: Routes = [
@@ -27,6 +28,8 @@ const routes: Routes = [
   { path: 'userprofile', component: Userprofile },
 
   { path: 'logout', component: Logout },
+
+  { path: 'booktab', component: Bookatable },
 
 
 ];

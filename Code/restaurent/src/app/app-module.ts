@@ -14,6 +14,8 @@ import { Login } from './auth/login/login';
 import { Userprofile } from './auth/userprofile/userprofile';
 import { Logout } from './auth/logout/logout';
 import { Admin } from './auth/admin/admin';
+import { Bookatable } from './auth/bookatable/bookatable';
+import { Addbook } from './auth/addbook/addbook';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { Admin } from './auth/admin/admin';
     Userprofile,
     Logout,
     Admin,
+    Bookatable,
+    Addbook,
    
   ],
   imports: [

@@ -1,0 +1,44 @@
+<div class="container">
+    <h1 class="my-2 text-center">All Menu</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>name</th>
+                <th>email</th>
+                <th>phone</th>
+                <th>date</th>
+                <th>time</th>
+                <th>message</th>
+                <th>Action</th>
+
+            </tr>
+
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let b of books | async">
+                <td>{{b.id}}</td>
+                <td>{{b.name}}</td>
+
+                <td>{{b.email}}</td>
+                <td>{{b.phone}}</td>
+                <td>{{b.date}}</td>
+                <td>{{b.time}}</td>
+                <td>{{b.message}}</td>
+                <td>
+                    <button class="btn btn-warning m-1 p-1" (click)="getMenuById(m.id)">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteMenu(m.id)">Delete</button>
+
+
+                </td>
+
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

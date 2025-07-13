@@ -8,7 +8,7 @@ import { Menu } from '../../model/menu.model';
 })
 export class MenuService {
 
-  baseUrl: string = "http://localhost:3000/menu"
+  baseUrl: string = "http://localhost:3000/menu";
 
   constructor(private http: HttpClient) { }
 
@@ -39,7 +39,7 @@ export class MenuService {
 
   updateMenu(id: string, menu: Menu): Observable<any> {
 
-    return this.http.put(this.baseUrl +'/'+ id, menu);
+    return this.http.put(this.baseUrl + '/' + id, menu);
 
   }
 
