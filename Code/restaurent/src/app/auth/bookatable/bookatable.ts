@@ -46,4 +46,21 @@ export class Bookatable implements OnInit {
 
   }
 
+  getBookById(id: string): void {
+    this.bookService.getBookById(id).subscribe({
+      next: (res) => {
+        console.log(res)
+        console.log("Data get Successfull");
+        this.router.navigate(['/updatebook', id]);
+      },
+
+      error: (err) => {
+
+        console.log(err);
+      }
+
+    });
+
+  }
+
 }

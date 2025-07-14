@@ -9,6 +9,7 @@ import { Userprofile } from './auth/userprofile/userprofile';
 import { Login } from './auth/login/login';
 import { Logout } from './auth/logout/logout';
 import { Bookatable } from './auth/bookatable/bookatable';
+import { Updatebook } from './auth/updatebook/updatebook';
 
 
 const routes: Routes = [
@@ -30,6 +31,8 @@ const routes: Routes = [
   { path: 'logout', component: Logout },
 
   { path: 'booktab', component: Bookatable },
+
+  { path: 'updatebook/:id', component: Updatebook },
 
 
 ];

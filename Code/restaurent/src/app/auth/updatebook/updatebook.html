@@ -1,0 +1,76 @@
+<div class="container my-3">
+    <div class="bg-success text-center">
+        <!-- <h1 class="jumborton">Booking Table</h1> -->
+
+        <h3>Edit Bookinh</h3>
+        <!-- <p>Please fill the form below to make a reservation</p> -->
+    </div>
+    <!--    start form-->
+    <form *ngIf="book.id" (ngSubmit)="updateBook()">
+
+        <!-- 1st row  -->
+        <div class="row">
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Full Name"
+                    [(ngModel)]="book.name">
+            </div>
+
+            <div class="col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="example@gmail.com"
+                    [(ngModel)]="book.email">
+            </div>
+        </div>
+
+        <!-- 2nd row  -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Phone</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Your Phone"
+                    [(ngModel)]="book.phone">
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Date</label>
+                <input type="date" name="date" class="form-control" id="date" placeholder="Date"
+                    [(ngModel)]="book.date">
+            </div>
+        </div>
+
+        <!-- 3rd row  -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" name="time" placeholder="Time"
+                    [(ngModel)]="book.time">
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <label for="exampleInputEmail1" class="form-label">Guest</label>
+                <input type="number" class="form-control" name="guest" id="guest" placeholder="guest"
+                    [(ngModel)]="book.guest">
+            </div>
+
+            <div class="form-group mt-3">
+                <label for="exampleInputEmail1" class="form-label">Special Request</label>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                    [(ngModel)]="book.message"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-3 text-center">
+            <div class="col-md-6">
+                <button type="submit" class="btn btn-success text-center" (click)="addBook()">Save</button>
+
+            </div>
+
+            <div class="col-md-6">
+                <button type="reset" class="btn btn-danger text-center">Reset</button>
+
+            </div>
+        </div>
+    </form>
+
+    <!--end form    -->
+</div>
