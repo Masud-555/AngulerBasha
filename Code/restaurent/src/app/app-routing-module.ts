@@ -10,6 +10,7 @@ import { Login } from './auth/login/login';
 import { Logout } from './auth/logout/logout';
 import { Bookatable } from './auth/bookatable/bookatable';
 import { Updatebook } from './auth/updatebook/updatebook';
+import { Addbook } from './auth/addbook/addbook';
 
 
 const routes: Routes = [
@@ -32,6 +33,8 @@ const routes: Routes = [
 
   { path: 'booktab', component: Bookatable },
 
+  { path: 'addbook', component: Addbook },
+  
   { path: 'updatebook/:id', component: Updatebook },
 
 
