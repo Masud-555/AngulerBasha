@@ -11,18 +11,35 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/allmenu">Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/addmenu">Add Menu</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/booktab">Show Booking</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/addbook">Book a Table</a>
-                </li>
+
+                <!-- Admin and user can see -->
+                <ng-container *ngIf="userRole === 'admin' || userRole === 'user'">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/allmenu">Menu</a>
+                    </li>
+                </ng-container>
+
+                <!-- admin can see -->
+                <ng-container *ngIf="userRole === 'admin' ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addmenu">Add Menu</a>
+                    </li>
+                </ng-container>
+
+                <!-- admin can see -->
+                <ng-container *ngIf="userRole === 'admin' ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/booktab">Show Booking</a>
+                    </li>
+                </ng-container>
+
+
+                <!-- Admin and user can see -->
+                <ng-container *ngIf="userRole === 'admin' || userRole === 'user'">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/addbook">Book a Table</a>
+                    </li>
+                </ng-container>
                 <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                 </li> -->

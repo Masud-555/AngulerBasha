@@ -25,6 +25,8 @@ const routes: Routes = [
 
   { path: 'reg', component: Registration },
 
+  { path: '', component: Login },
+
   { path: 'login', component: Login },
 
   { path: 'userprofile', component: Userprofile },
@@ -34,7 +36,7 @@ const routes: Routes = [
   { path: 'booktab', component: Bookatable },
 
   { path: 'addbook', component: Addbook },
-  
+
   { path: 'updatebook/:id', component: Updatebook },
 
 
