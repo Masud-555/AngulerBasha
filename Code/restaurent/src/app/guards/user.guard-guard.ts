@@ -4,7 +4,7 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 import { Observable } from 'rxjs';
 
 
-export class userGuardGuard implements CanActivate {
+export class UserGuardGuard implements CanActivate {
 
 
   constructor(

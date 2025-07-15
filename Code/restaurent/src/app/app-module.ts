@@ -17,6 +17,9 @@ import { Admin } from './auth/admin/admin';
 import { Bookatable } from './auth/bookatable/bookatable';
 import { Addbook } from './auth/addbook/addbook';
 import { Updatebook } from './auth/updatebook/updatebook';
+import { Addemp } from './employee/addemp/addemp';
+import { Viewemp } from './employee/viewemp/viewemp';
+import { Updateemp } from './employee/updateemp/updateemp';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,9 @@ import { Updatebook } from './auth/updatebook/updatebook';
     Bookatable,
     Addbook,
     Updatebook,
+    Addemp,
+    Viewemp,
+    Updateemp,
    
   ],
   imports: [
