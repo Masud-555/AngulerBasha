@@ -20,6 +20,9 @@ import { Updatebook } from './auth/updatebook/updatebook';
 import { Addemp } from './employee/addemp/addemp';
 import { Viewemp } from './employee/viewemp/viewemp';
 import { Updateemp } from './employee/updateemp/updateemp';
+import { AddCashier } from './cashier/add-cashier/add-cashier';
+import { ViewCashier } from './cashier/view-cashier/view-cashier';
+import { UpdateCashier } from './cashier/update-cashier/update-cashier';
 
 @NgModule({
   declarations: [
@@ -39,6 +42,9 @@ import { Updateemp } from './employee/updateemp/updateemp';
     Addemp,
     Viewemp,
     Updateemp,
+    AddCashier,
+    ViewCashier,
+    UpdateCashier,
    
   ],
   imports: [
