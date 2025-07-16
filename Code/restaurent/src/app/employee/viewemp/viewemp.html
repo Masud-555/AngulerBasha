@@ -1,1 +1,48 @@
-<p>viewemp works!</p>
+
+<div class="container">
+    <h1 class="my-2 text-center">All Menu</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Photo</th>
+                <th>Name</th>
+                <th>Email</th>                
+                <th>Location</th>
+                <th>Gender</th>
+                <th>NID</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Action</th>
+                
+            </tr>          
+            
+
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let e of employees | async">
+                <td>{{e.id}}</td>
+                <td><img src="{{e.photo}}" height="100" width="100"></td>
+                <td>{{e.name}}</td>
+                <td>{{e.email}}</td>                
+                <td>{{e.location}}</td>
+                <td>{{e.gender}}</td>
+                <td>{{e.nid}}</td>
+                <td>{{e.phone}}</td>
+                <td>{{e.salary}}</td>
+                <td>
+                     <button class="btn btn-warning m-1 p-1" (click)="getEmpById(e.id)">Edit</button>
+                    <button class="btn btn-danger m-1 p-1" (click)="deleteEmp(e.id)">Delete</button>
+
+
+                </td>
+                
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>

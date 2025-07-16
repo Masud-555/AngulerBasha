@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class ShowAllMenu implements OnInit {
 
 
-
   constructor(
     private menuService: MenuService,
     private router: Router,
@@ -20,6 +19,7 @@ export class ShowAllMenu implements OnInit {
 
   ) { }
   menus: any;
+
 
   ngOnInit(): void {
     this.loadAllItems();

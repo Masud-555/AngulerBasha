@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrl: './bookatable.css'
 })
 export class Bookatable implements OnInit {
+  
   books: any;
 
   constructor(private bookService: BookService,

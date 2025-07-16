@@ -11,6 +11,7 @@ import { Logout } from './auth/logout/logout';
 import { Bookatable } from './auth/bookatable/bookatable';
 import { Updatebook } from './auth/updatebook/updatebook';
 import { Addbook } from './auth/addbook/addbook';
+import { Addemp } from './employee/addemp/addemp';
 
 
 const routes: Routes = [
@@ -38,6 +39,8 @@ const routes: Routes = [
   { path: 'addbook', component: Addbook },
 
   { path: 'updatebook/:id', component: Updatebook },
+
+  { path: 'addemp', component: Addemp },
 
 
 ];

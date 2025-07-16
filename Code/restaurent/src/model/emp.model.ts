@@ -7,6 +7,7 @@ export class Employee {
     name!: string;
     salary!: number;
     email!: string;
+    phone!: number;
     gender!: string;
     location!: string;
     nid!: number;
