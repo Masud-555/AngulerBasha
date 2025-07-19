@@ -1,4 +1,3 @@
-
 <div class="container my-3">
     <div class="bg-success text-center">
         <h1 class="jumborton">Edite Menu</h1>
@@ -8,24 +7,14 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Item Name</label>
-                <input type="text" class="form-control" id="name" name="item" placeholder="Full Name" [(ngModel)]="menu.item">
+                <input type="text" class="form-control" id="name" name="item" placeholder="Full Name"
+                    [(ngModel)]="menu.item">
             </div>
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Category</label>
-                <input type="text" class="form-control" id="category" name="category" placeholder="category" [(ngModel)]="menu.category">
+                <input type="text" class="form-control" id="category" name="category" placeholder="category"
+                    [(ngModel)]="menu.category">
             </div>
-
-            <!-- <div class="col-md-6">
-                <label for="category">Category</label>
-                <select class="form-control" id="category" name="category" placeholder="Category" [(ngModel)]="menu.category">
-                    <option value="Fast Food">Fast Food</option>
-                    <option value="Main Course">Main Course</option>
-                    <option value="Salad">Salad</option>
-                    <option value="Dessert">Dessert</option>
-                    <option value="Drinks">Drinks</option>
-                    <option value="Drinks">Ice-Cream</option>
-                </select>
-            </div> -->
 
         </div>
 
@@ -33,44 +22,38 @@
         <div class="row">
             <div class="col-md-6">
                 <label for="price">Price</label>
-                <input type="number" class="form-control" id="price" name="price" placeholder="price" [(ngModel)]="menu.price">
+                <input type="number" class="form-control" id="price" name="price" placeholder="price"
+                    [(ngModel)]="menu.price">
             </div>
 
             <div class="col-md-6">
                 <label for="exampleInputEmail1" class="form-label">Image File</label>
-                <input type="text" class="form-control" id="photo" name="image" placeholder="example@gmail.com"  [(ngModel)]="menu.image">
-            </div> 
-
-            <!-- <div class="col-md-6 " formGroupName="location">
-                <div class="invalid-feedback">Please select a location.</div>
-                <label for="location" class="form-label">Location:</label>
-                <select id="location" formControlName="name" class="form-select" required>
-                    <option *ngFor="let loc of locations" [ngValue]="loc.name">{{loc.name}}</option>
-                </select>
-
-            </div> -->
-
+                <input type="text" class="form-control" id="photo" name="image" placeholder="example@gmail.com"
+                    [(ngModel)]="menu.image">
+            </div>
+            
         </div>
 
 
         <div class="row">
             <div class="col-md-6">
                 <div class="col-md-6">
-                     <label class="form-label">Stoke</label><br>
-                     <select class="form-label" id="available" name="available" placeholder="available" [(ngModel)]="menu.available">
+                    <label class="form-label">Stoke</label><br>
+                    <select class="form-label" id="available" name="available" placeholder="available"
+                        [(ngModel)]="menu.available">
                         <option selected>--Select one--</option>
                         <option value="Available">Available</option>
-                        <option value="No-Available">No-Available</option>                        
+                        <option value="No-Available">No-Available</option>
                     </select>
                 </div>
-                <!-- <input type="text" class="form-control" id="name" formControlName="name" placeholder="Full Name"> -->                
+                <!-- <input type="text" class="form-control" id="name" formControlName="name" placeholder="Full Name"> -->
             </div>
         </div>
 
 
         <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center" >Update</button>
+                <button type="submit" class="btn btn-success text-center">Update</button>
 
             </div>
 
