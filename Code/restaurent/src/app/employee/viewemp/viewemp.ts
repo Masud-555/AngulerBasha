@@ -50,7 +50,7 @@ export class Viewemp implements OnInit {
 
   }
 
-  getBookById(id: string): void {
+  getEmpById(id: string): void {
     this.empService.getEmpById(id).subscribe({
       next: (res) => {
         console.log(res)
