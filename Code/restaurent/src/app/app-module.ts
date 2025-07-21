@@ -23,6 +23,8 @@ import { Updateemp } from './employee/updateemp/updateemp';
 import { AddCashier } from './cashier/add-cashier/add-cashier';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { UpdateCashier } from './cashier/update-cashier/update-cashier';
+import { AddAppoinment } from './appoin_schedu/add-appoinment/add-appoinment';
+import { AddSchedule } from './appoin_schedu/add-schedule/add-schedule';
 
 @NgModule({
   declarations: [
@@ -45,6 +47,8 @@ import { UpdateCashier } from './cashier/update-cashier/update-cashier';
     AddCashier,
     ViewCashier,
     UpdateCashier,
+    AddAppoinment,
+    AddSchedule,
    
   ],
   imports: [

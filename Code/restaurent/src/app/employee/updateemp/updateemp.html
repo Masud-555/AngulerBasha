@@ -3,7 +3,7 @@
         <h1 class="jumborton">Update Employee</h1>
     </div>
     <!--    start form-->
-    <form [formGroup]="formGroup">
+    <form form *ngIf="emp.id" (ngSubmit)="updateEmp()">
 
         <!-- 1st row  -->
         <div class="row">
@@ -71,7 +71,7 @@
 
         <div class="row mt-3 text-center">
             <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center" (click)="addEmp()">Update</button>
+                <button type="submit" class="btn btn-success text-center">Update</button>
 
             </div>
 
