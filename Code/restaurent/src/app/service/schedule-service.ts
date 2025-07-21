@@ -1,9 +1,34 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScheduleService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:3000/schedule';
+
+
+  constructor(private http: HttpClient) { }
+
+
+  createSlot(slot: ScheduleSlot): Observable<ScheduleSlot> {
+    return this.http.post<ScheduleSlot>(this.apiUrl, slot);
+  }
+
+  getSlotsByBooking(doctorId: string): Observable<ScheduleSlot[]> {
+    return this.http.get<ScheduleSlot[]>(`${this.apiUrl}?doctorId=${doctorId}`);
+  }
+
+
+  updateSlot(slot: ScheduleSlot): Observable<ScheduleSlot> {
+    return this.http.put<ScheduleSlot>(`${this.apiUrl}/${slot.id}`, slot);
+  }
+
+  getAvailableSlots(doctorId: string): Observable<ScheduleSlot[]> {
+    return this.http.get<ScheduleSlot[]>(`${this.apiUrl}?bookingId=${doctorId}&isBooked=false`);
+  }
+
+
 }
