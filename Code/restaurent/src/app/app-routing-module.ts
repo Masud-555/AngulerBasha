@@ -12,6 +12,7 @@ import { Bookatable } from './auth/bookatable/bookatable';
 import { Updatebook } from './auth/updatebook/updatebook';
 import { Addbook } from './auth/addbook/addbook';
 import { Addemp } from './employee/addemp/addemp';
+import { Updateemp } from './employee/updateemp/updateemp';
 
 
 const routes: Routes = [
@@ -41,6 +42,8 @@ const routes: Routes = [
   { path: 'updatebook/:id', component: Updatebook },
 
   { path: 'addemp', component: Addemp },
+
+  { path: 'updateemp/:id', component: Updateemp },
 
 
 ];
