@@ -25,6 +25,9 @@ import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { UpdateCashier } from './cashier/update-cashier/update-cashier';
 import { AddAppoinment } from './appoin_schedu/add-appoinment/add-appoinment';
 import { AddSchedule } from './appoin_schedu/add-schedule/add-schedule';
+import { AddBook } from './bookingTable/add-book/add-book';
+import { ViewBook } from './bookingTable/view-book/view-book';
+import { UpdateBook } from './bookingTable/update-book/update-book';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { AddSchedule } from './appoin_schedu/add-schedule/add-schedule';
     UpdateCashier,
     AddAppoinment,
     AddSchedule,
+    AddBook,
+    ViewBook,
+    UpdateBook,
    
   ],
   imports: [

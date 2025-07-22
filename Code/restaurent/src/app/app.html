@@ -31,6 +31,11 @@
                         <a class="nav-link" href="/addemp">Add Employee</a>
                     </li>
                 </div>
+                <div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/viewemp">view Employee</a>
+                    </li>
+                </div>
 
                 <!-- admin can see -->
                 <ng-container *ngIf="userRole === 'admin' ">
@@ -41,14 +46,19 @@
 
 
                 <!-- Admin and user can see -->
-                <ng-container *ngIf="userRole === 'admin' || userRole === 'user'">
+                <!-- <ng-container *ngIf="userRole === 'admin' || userRole === 'user'">
                     <li class="nav-item">
                         <a class="nav-link" href="/addbook">Book a Table</a>
                     </li>
-                </ng-container>
-                <!-- <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </li> -->
+                </ng-container> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/addbook">Book a Table</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/add-book">Booking Table</a>
+                </li>
+
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-bs-toggle="dropdown"
                         aria-expanded="false">Dropdown</a>

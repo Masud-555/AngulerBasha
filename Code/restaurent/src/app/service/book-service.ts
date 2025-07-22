@@ -7,40 +7,32 @@ import { BookTable } from '../../model/booking.model';
   providedIn: 'root'
 })
 export class BookService {
-
-
-  baseUrl: string = "http://localhost:3000/book";
+ baseUrl: string = "http://localhost:3000/book";
 
   constructor(private http: HttpClient) { }
 
-
   getBook(): Observable<any> {
-
     return this.http.get(this.baseUrl);
-
   }
 
   saveBook(book: BookTable): Observable<any> {
-
     return this.http.post(this.baseUrl, book);
-
   }
 
   deleteBook(id: string): Observable<any> {
-
-    return this.http.delete(this.baseUrl + '/' + id);
-
+    return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
   getBookById(id: string): Observable<any> {
-
-    return this.http.get(this.baseUrl + '/' + id);
-
+    return this.http.get(`${this.baseUrl}/${id}`);
   }
 
   updateBook(id: string, book: BookTable): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${id}`, book);
+  }
 
-    return this.http.put(this.baseUrl + '/' + id, book);
-
+  // ✅ Get bookings by date
+  getBookingsByDate(date: string): Observable<BookTable[]> {
+    return this.http.get<BookTable[]>(`${this.baseUrl}?date=${date}`);
   }
 }

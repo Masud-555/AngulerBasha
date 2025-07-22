@@ -1,76 +1,47 @@
-<div class="container my-3">
-    <div class="bg-success text-center">
-        <!-- <h1 class="jumborton">Booking Table</h1> -->
+<form [formGroup]="formGroup" (ngSubmit)="addBook()" class="container mt-4 p-4 shadow rounded bg-light" style="max-width: 600px;">
 
-        <h3>Book A Table</h3>
-        <p>Please fill the form below to make a reservation</p>
-    </div>
-    <!--    start form-->
-    <form [formGroup]="formGroup">
+  <h3 class="mb-4 text-center text-primary">Book a Table</h3>
 
-        <!-- 1st row  -->
-        <div class="row">
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" formControlName="name" placeholder="Full Name">
-            </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter your full name">
+  </div>
 
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" formControlName="email"
-                    placeholder="example@gmail.com">
-            </div>
-        </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">Email Address</label>
+    <input type="email" class="form-control" formControlName="email" id="email" placeholder="you@example.com">
+  </div>
 
-        <!-- 2nd row  -->
-        <div class="row">
-            <!-- <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Fee</label>
-                <input type="text" class="form-control" id="contactNo" formControlName="fee" placeholder="Full Name">
-            </div> -->
+  <div class="mb-3">
+    <label for="phone" class="form-label">Phone Number</label>
+    <input type="text" class="form-control" formControlName="phone" id="phone" placeholder="Enter phone number">
+  </div>
 
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Phone</label>
-                <input type="text" class="form-control" id="phone" formControlName="phone" placeholder="Your Phone">
-            </div>
+  <div class="mb-3">
+    <label for="date" class="form-label">Booking Date</label>
+    <input type="date" class="form-control" formControlName="date" id="date">
+  </div>
 
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Date</label>
-                <input type="date" formControlName="date" class="form-control" id="date" placeholder="Date" required="">
-            </div>
-        </div>
+  <div class="mb-3">
+    <label for="time" class="form-label">Select Time Slot</label>
+    <select class="form-select" formControlName="time" id="time">
+      <option value="">-- Select Time Slot --</option>
+      <option *ngFor="let slot of timeSlots" [value]="slot">{{ slot }}</option>
+    </select>
+  </div>
 
-        <!-- 3rd row  -->
-        <div class="row">
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Time</label>
-                <input type="time" class="form-control" id="time" formControlName="time" placeholder="Time">
-            </div>
+  <div class="mb-3">
+    <label for="guest" class="form-label">Number of Guests</label>
+    <input type="number" class="form-control" formControlName="guest" id="guest" min="1" placeholder="Enter guest count">
+  </div>
 
-            <div class="col-md-6">
-                <label for="exampleInputEmail1" class="form-label">Guest</label>
-                <input type="number" class="form-control" formControlName="guest" id="guest" placeholder="guest">
-            </div>
-            <div class="col-md-6">
-                <div class="form-group mt-3">
-                    <label for="exampleInputEmail1" class="form-label">Special Request</label>
-                    <textarea class="form-control" formControlName="message" rows="5" placeholder="Message"></textarea>
-                </div>
-            </div>
-        </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Special Request</label>
+    <textarea class="form-control" formControlName="message" id="message" rows="3" placeholder="Write any message..."></textarea>
+  </div>
 
-        <div class="row mt-3 text-center">
-            <div class="col-md-6">
-                <button type="submit" class="btn btn-success text-center" (click)="addBook()">Save</button>
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary px-5" [disabled]="formGroup.invalid">Book Now</button>
+  </div>
 
-            </div>
-
-            <div class="col-md-6">
-                <button type="reset" class="btn btn-danger text-center">Reset</button>
-
-            </div>
-        </div>
-    </form>
-
-    <!--end form    -->
-</div>
+</form>

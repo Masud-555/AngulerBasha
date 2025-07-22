@@ -13,6 +13,8 @@ import { Updatebook } from './auth/updatebook/updatebook';
 import { Addbook } from './auth/addbook/addbook';
 import { Addemp } from './employee/addemp/addemp';
 import { Updateemp } from './employee/updateemp/updateemp';
+import { Viewemp } from './employee/viewemp/viewemp';
+import { BookingTable } from '../model/booking2.model';
 
 
 const routes: Routes = [
@@ -37,11 +39,15 @@ const routes: Routes = [
 
   { path: 'booktab', component: Bookatable },
 
+  { path: 'bookingtab', component: BookingTable },
+
   { path: 'addbook', component: Addbook },
 
   { path: 'updatebook/:id', component: Updatebook },
 
   { path: 'addemp', component: Addemp },
+
+  { path: 'viewemp', component: Viewemp },
 
   { path: 'updateemp/:id', component: Updateemp },
 
