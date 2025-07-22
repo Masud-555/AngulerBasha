@@ -14,7 +14,7 @@ import { Addbook } from './auth/addbook/addbook';
 import { Addemp } from './employee/addemp/addemp';
 import { Updateemp } from './employee/updateemp/updateemp';
 import { Viewemp } from './employee/viewemp/viewemp';
-import { BookingTable } from '../model/booking2.model';
+
 
 
 const routes: Routes = [
@@ -37,9 +37,7 @@ const routes: Routes = [
 
   { path: 'logout', component: Logout },
 
-  { path: 'booktab', component: Bookatable },
-
-  { path: 'bookingtab', component: BookingTable },
+  { path: 'booktab', component: Bookatable },  
 
   { path: 'addbook', component: Addbook },
 

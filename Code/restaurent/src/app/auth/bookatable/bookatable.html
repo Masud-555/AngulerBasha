@@ -9,6 +9,7 @@
                 <th>phone</th>
                 <th>date</th>
                 <th>time</th>
+                <th>guest</th>
                 <th>message</th>
                 <th>Action</th>
 
@@ -21,11 +22,11 @@
             <tr *ngFor="let b of books | async">
                 <td>{{b.id}}</td>
                 <td>{{b.name}}</td>
-
                 <td>{{b.email}}</td>
                 <td>{{b.phone}}</td>
                 <td>{{b.date}}</td>
                 <td>{{b.time}}</td>
+                <td>{{b.guest}}</td>
                 <td>{{b.message}}</td>
                 <td>
                     <button class="btn btn-warning m-1 p-1" (click)="getBookById(b.id)">Edit</button>
