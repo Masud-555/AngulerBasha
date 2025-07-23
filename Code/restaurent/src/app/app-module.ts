@@ -22,6 +22,7 @@ import { Updateemp } from './employee/updateemp/updateemp';
 import { AddCashier } from './cashier/add-cashier/add-cashier';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { UpdateCashier } from './cashier/update-cashier/update-cashier';
+import { Home } from './home/home';
 
 
 @NgModule({
@@ -44,6 +45,7 @@ import { UpdateCashier } from './cashier/update-cashier/update-cashier';
     AddCashier,
     ViewCashier,
     UpdateCashier,
+    Home,
    
 
    

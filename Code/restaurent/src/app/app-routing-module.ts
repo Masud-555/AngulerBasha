@@ -16,13 +16,14 @@ import { Updateemp } from './employee/updateemp/updateemp';
 import { Viewemp } from './employee/viewemp/viewemp';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { AddCashier } from './cashier/add-cashier/add-cashier';
+import { Home } from './home/home';
 
 
 
 
 const routes: Routes = [
 
- 
+ { path:'', component: Home},
 
   { path: 'allmenu', component: ShowAllMenu },
 
