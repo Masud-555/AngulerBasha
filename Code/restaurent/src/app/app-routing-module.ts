@@ -17,6 +17,8 @@ import { Viewemp } from './employee/viewemp/viewemp';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { AddCashier } from './cashier/add-cashier/add-cashier';
 import { Home } from './home/home';
+import { UserMenu } from './user-menu/user-menu';
+import { Admin } from './auth/admin/admin';
 
 
 
@@ -26,6 +28,8 @@ const routes: Routes = [
  { path:'', component: Home},
 
   { path: 'allmenu', component: ShowAllMenu },
+
+  { path: 'user-menu', component: UserMenu },
 
   { path: 'addmenu', component: Addmenu },
 
@@ -38,6 +42,8 @@ const routes: Routes = [
   { path: 'login', component: Login },
 
   { path: 'userprofile', component: Userprofile },
+
+  { path: 'adminprofile', component: Admin },
 
   { path: 'logout', component: Logout },
 

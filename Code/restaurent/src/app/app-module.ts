@@ -23,6 +23,7 @@ import { AddCashier } from './cashier/add-cashier/add-cashier';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
 import { UpdateCashier } from './cashier/update-cashier/update-cashier';
 import { Home } from './home/home';
+import { UserMenu } from './user-menu/user-menu';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { Home } from './home/home';
     ViewCashier,
     UpdateCashier,
     Home,
+    UserMenu,
    
 
    

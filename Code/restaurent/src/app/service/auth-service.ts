@@ -145,6 +145,14 @@ export class AuthService {
     }
     return null;
   }
+  getAdminProfileFromStorage(): UserModel | null {
+    if (this.isBrowser()) {
+      const adminProfile = localStorage.getItem('currentUser');
+      console.log('User Profile is: ', adminProfile);
+      return adminProfile ? JSON.parse(adminProfile) : null;
+    }
+    return null;
+  }
 
 
   isAdmin(): boolean {
