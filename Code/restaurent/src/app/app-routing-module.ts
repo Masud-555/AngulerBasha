@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Home } from './home/home';
+
 import { ShowAllMenu } from './show-all-menu/show-all-menu';
 import { Addmenu } from './addmenu/addmenu';
 import { Updatemenu } from './updatemenu/updatemenu';
@@ -15,12 +15,14 @@ import { Addemp } from './employee/addemp/addemp';
 import { Updateemp } from './employee/updateemp/updateemp';
 import { Viewemp } from './employee/viewemp/viewemp';
 import { ViewCashier } from './cashier/view-cashier/view-cashier';
+import { AddCashier } from './cashier/add-cashier/add-cashier';
+
 
 
 
 const routes: Routes = [
 
-  { path: '', component: Home },
+ 
 
   { path: 'allmenu', component: ShowAllMenu },
 
@@ -50,7 +52,9 @@ const routes: Routes = [
 
   { path: 'updateemp/:id', component: Updateemp },
 
-  { path: 'view-cashier', component: ViewCashier },
+  // { path: 'view-cashier', component: ViewCashier },
+
+  { path: 'add-cashier', component: AddCashier },
 
 
 ];

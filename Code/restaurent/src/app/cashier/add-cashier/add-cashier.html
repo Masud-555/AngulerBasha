@@ -1,0 +1,48 @@
+<div class="cashier-container">
+  <h2>Add Items</h2>
+
+  <form [formGroup]="form">
+    <table class="cashier-table">
+      <thead>
+        <tr>
+          <th>Item Name</th>
+          <th>Quantity</th>
+          <th>Item Price</th>
+          <th>Total</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody formArrayName="items">
+        <tr *ngFor="let item of items.controls; let i = index" [formGroupName]="i">
+          <td>
+            <input formControlName="itemName" placeholder="Item Name" />
+          </td>
+          <td>
+            <input type="number" formControlName="quantity" (input)="updateTotal(i)" />
+          </td>
+          <td>
+            <input type="number" formControlName="price" (input)="updateTotal(i)" />
+          </td>
+          <td>{{ getItemTotal(i) | currency:'USD' }}</td>
+          <td>
+            <button type="button" (click)="removeItem(i)">Remove</button>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            <button type="button" (click)="addItem()">+ Add Item</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </form>
+
+  <table class="cashier-table mt-4">
+    <tbody>
+      <tr class="total-row">
+        <td colspan="3" class="text-right"><strong>Grand Total:</strong></td>
+        <td><strong>{{ grandTotal | currency:'USD' }}</strong></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

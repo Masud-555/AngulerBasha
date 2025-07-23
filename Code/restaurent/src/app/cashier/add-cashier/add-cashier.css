@@ -1,0 +1,40 @@
+.cashier-container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.cashier-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cashier-table th,
+.cashier-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.cashier-table input {
+  border: none;
+  width: 100%;
+  text-align: center;
+  background: transparent;
+}
+
+.cashier-table input:focus {
+  outline: none;
+  background: #f3f3f3;
+}
+
+.cashier-table .total-row td {
+  font-weight: bold;
+  background-color: #f9f9f9;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}

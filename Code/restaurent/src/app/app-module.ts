@@ -3,7 +3,6 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
-import { Home } from './home/home';
 import { ShowAllMenu } from './show-all-menu/show-all-menu';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { Addmenu } from './addmenu/addmenu';
@@ -27,8 +26,7 @@ import { UpdateCashier } from './cashier/update-cashier/update-cashier';
 
 @NgModule({
   declarations: [
-    App,
-    Home,
+    App,    
     ShowAllMenu,
     Addmenu,
     Updatemenu,
