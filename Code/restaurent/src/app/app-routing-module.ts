@@ -14,6 +14,7 @@ import { Addbook } from './auth/addbook/addbook';
 import { Addemp } from './employee/addemp/addemp';
 import { Updateemp } from './employee/updateemp/updateemp';
 import { Viewemp } from './employee/viewemp/viewemp';
+import { ViewCashier } from './cashier/view-cashier/view-cashier';
 
 
 
@@ -48,6 +49,8 @@ const routes: Routes = [
   { path: 'viewemp', component: Viewemp },
 
   { path: 'updateemp/:id', component: Updateemp },
+
+  { path: 'view-cashier', component: ViewCashier },
 
 
 ];

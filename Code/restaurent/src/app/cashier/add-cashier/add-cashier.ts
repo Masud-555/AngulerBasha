@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-add-cashier',
   standalone: false,
@@ -7,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './add-cashier.css'
 })
 export class AddCashier {
+
+  
 
 }
