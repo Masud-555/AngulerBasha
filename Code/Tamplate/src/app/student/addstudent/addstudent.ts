@@ -23,7 +23,7 @@ export class Addstudent {
     this.stuForm = this.formBuilder.group({
       name: [''],
       email: [''],
-      age: ['']
+      fee: ['']
 
     });
 
