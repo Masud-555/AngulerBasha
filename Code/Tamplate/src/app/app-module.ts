@@ -15,7 +15,6 @@ import { HTTP_INTERCEPTORS, provideHttpClient, withFetch } from '@angular/common
 import { AuthInterceptor } from './service/authInterceptor';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { AddcustomerComponent } from './customer/addcustomer.component/addcustomer.component';
 
 
 @NgModule({
@@ -29,7 +28,7 @@ import { AddcustomerComponent } from './customer/addcustomer.component/addcustom
     AddjobseekerComponent,
     JobseekerProfileComponent,
     LoginComponent,   
-    AddcustomerComponent,
+
   ],
   imports: [
     BrowserModule,

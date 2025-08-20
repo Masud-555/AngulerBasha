@@ -1,1 +1,57 @@
-<p>add-employee works!</p>
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Employee List</h2>
+
+  <!-- Add button -->
+  <div class="text-end mb-3">
+    <button class="btn btn-primary" (click)="goToAddEmployee()">+ Add Employee</button>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="loading" class="alert alert-info text-center">
+    Loading employees...
+  </div>
+
+  <!-- Error -->
+  <div *ngIf="errorMessage" class="alert alert-danger text-center">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Table -->
+  <table *ngIf="employees.length > 0" class="table table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Designation</th>
+        <th>Location</th>
+        <th>Gender</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of employees">
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.phone }}</td>
+        <td>{{ emp.email }}</td>
+        <td>{{ emp.salary }}</td>
+        <td>{{ emp.designation }}</td>
+        <td>{{ emp.location }}</td>
+        <td>{{ emp.gender }}</td>
+        <td>
+          <button class="btn btn-sm btn-warning me-2" (click)="goToEditEmployee(emp.id)">Edit</button>
+          <button class="btn btn-sm btn-danger" (click)="deleteEmployee(emp.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- No Data -->
+  <div *ngIf="!loading && employees.length === 0" class="alert alert-warning text-center">
+    No employees found.
+  </div>
+</div>
+
