@@ -5,6 +5,7 @@ import { AlluserComponent } from './user/alluser.component/alluser.component';
 import { AddjobseekerComponent } from './jobseeker/addjobseeker.component/addjobseeker.component';
 import { JobseekerProfileComponent } from './jobseeker/jobseeker-profile.component/jobseeker-profile.component';
 import { LoginComponent } from './auth/login.component/login.component';
+import { AddcustomerComponent } from './customer/addcustomer.component/addcustomer.component';
 
 const routes: Routes = [
   { path: '', component: Addstudent },
@@ -12,6 +13,8 @@ const routes: Routes = [
   { path: 'addJobSeeker', component: AddjobseekerComponent },
   { path: 'jobsekpro', component: JobseekerProfileComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'addcustomer', component: AddcustomerComponent },
+
 ];
 
 @NgModule({

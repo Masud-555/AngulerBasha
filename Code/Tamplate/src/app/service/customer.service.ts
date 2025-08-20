@@ -3,16 +3,16 @@ import { environment } from '../../environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from './auth-service';
 import { Observable } from 'rxjs';
-import { JobSeeker } from '../model/jobseeker.model';
 import { isPlatformBrowser } from '@angular/common';
+
+import { Customer } from '../model/customer.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class JobseekerService {
+export class CustomerService {
 
-
- private baseUrl = environment.apiBaseUrl + '/jobseeker/';
+  private baseUrl = environment.apiBaseUrl + '/customer/';
 
   constructor(private http: HttpClient, private authService: AuthService,
     @Inject(PLATFORM_ID) private platformId: Object
@@ -21,17 +21,16 @@ export class JobseekerService {
 
 
 
-
   registerJobSeeker(user: any, jobSeeker: any, photo: File): Observable<any> {
     const formData = new FormData();
     formData.append('user', JSON.stringify(user));
-    formData.append('jobSeeker', JSON.stringify(jobSeeker));
+    formData.append('customer', JSON.stringify(jobSeeker));
     formData.append('photo', photo);
 
     return this.http.post(this.baseUrl, formData);
   }
 
-  getProfile(): Observable<JobSeeker> {
+  getProfile(): Observable<Customer> {
     let headers = new HttpHeaders();
 
     if (isPlatformBrowser(this.platformId)) {
@@ -42,8 +41,7 @@ export class JobseekerService {
       }
     }
 
-    return this.http.get<JobSeeker>(`${environment.apiBaseUrl}/jobseeker/profile`, { headers });
+    return this.http.get<Customer>(`${environment.apiBaseUrl}/customer/profile`, { headers });
   }
-
   
 }
